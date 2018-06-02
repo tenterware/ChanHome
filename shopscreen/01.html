@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Daeshin Real Time Unit Platform</title>
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<script>
+		var images = new Array ('imgs/01/1.jpg', 'imgs/01/2.jpg');
+		var index = 0;
+		function rotateImage(){
+			$('#myImage').fadeOut('slow', function(){
+				$(this).attr('src', images[index]);
+				$(this).fadeIn('slow', function(){
+					if (index == images.length-1){
+						index = 0;
+					} else {
+						index++;
+					}
+				});
+			});
+		}
+		$( document ).ready( function () {
+			setInterval (rotateImage, 15000);
+		});
+	</script>
+</head>
+
+<body style='padding:0 0 0 0; margin:0 0 0 0; overflow:hidden;' >
+  <img id="myImage" style='padding:0 0 0 0; margin:0 0 0 0; overflow:hidden;' src="" alt="" />
+</body>
+
+</html>
