@@ -1,3 +1,4 @@
+/*
 new daum.roughmap.Lander({
         "timestamp" : "1484205925798",
         "key" : "fcto"
@@ -7,6 +8,7 @@ var mapContainer = document.getElementById('mapContainer');
 var curWidth = mapContainer.offsetWidth;
 daumContainer.style.width = curWidth + 'px';
 daumContainer.style.height = '400px';
+*/
 
 function formatDate(d) {
 	month = '' + (d.getMonth() + 1),
@@ -28,6 +30,7 @@ function formatDate(d) {
 
 	return [year, month, day].join('-') + ' ' +  _time;
 }
+
 function liveImageRefresh(){
         var d = new Date();
         var hour = d.getHours();
@@ -37,24 +40,28 @@ function liveImageRefresh(){
 		srcURL = '/img/stream/dayoff.jpg';
 	} else {
 		if(hour >=0 && hour < 7){
-		        srcURL = '/img/stream/closed.jpg';
+		        srcURL = "url('/img/stream/closed.jpg')";
 		} else if(hour >= 7 && hour < 11){
-		        srcURL = '/img/stream/preparing.jpg';
+		        srcURL = "url('/img/stream/preparing.jpg')";
 		} else if(hour >= 11 && hour < 22){
-		        srcURL = 'http://121.131.240.137/?action=snapshot' 
+		        srcURL = "url('http://121.131.240.137/?action=snapshot')" 
 		} else if(hour >= 22 && hour <= 23){
-		        srcURL = '/img/stream/closed.jpg';
+		        srcURL = "url('/img/stream/closed.jpg')";
 		}
 	}
-        $('#streamPicture').attr('src', srcURL);
+        //$('#streamPicture').attr('src', srcURL);
+	$("#streamPicture").css("background-image", srcURL);
         $('#streamPicture_datetime').html( formatDate(d) );
 }
 
+/*
 $("#streamPicture").on("click", function() {
         liveImageRefresh();
 });
+*/
 
 $(document).ready(function(){
-        liveImageRefresh();
+        //liveImageRefresh();
+	//alert('hello');
 });
 

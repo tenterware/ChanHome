@@ -3,6 +3,8 @@ var format = require('date-format');
 var net = require('net');
 var app = express();
 
+var PORT = 8080;
+
 var gIOSocket = null;
 var gTCPSocket = null;
 
@@ -40,7 +42,7 @@ app.get('/', function(req,res){
 
 app.use(express.static(__dirname + '/'));
 
-var server = app.listen(80, function() {
+var server = app.listen(PORT, function() {
 	var host = server.address().address;
 	var port = server.address().port;
 	console.log("Example app listening at http://%s:%s", host, port);
