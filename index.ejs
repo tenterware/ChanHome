@@ -32,28 +32,25 @@
     <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+          <a class="js-scroll-trigger" href="#headerChanzip">Chanzip</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
+          <a class="js-scroll-trigger" href="#mealMenu">Menu</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#about">About</a>
+          <a class="js-scroll-trigger" href="#deliveryUber">Delivery</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#services">Services</a>
+          <a class="js-scroll-trigger" href="#liveShowcase">Showcase</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#contact">Contact</a>
+          <a class="js-scroll-trigger" href="#daumMap">Map</a>
         </li>
       </ul>
     </nav>
 
     <!-- Header -->
-    <header class="masthead d-flex">
+    <header id='headerChanzip' class="masthead d-flex">
       <div class="container text-center my-auto">
         <h3 class="mb-5 txt-front-shopMotive">
           <em>어머니의 마음으로 꽉찬 집밥</em>
@@ -67,16 +64,9 @@
 	<section class="section-seperation-white" id="about">
 	</section>
 
-    <!-- Uber Advertise -->
-    <section class="uber-getApp">
-      <div class="container text-center">
-		<h2 class="mb-5 txt-front-uberExplain" >배달은 우버이츠로!</h2>
-        	<a class="btn btn-orange btn-xl" href="https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=ko">갑시다 앱 받으러 GO!</a>
-      </div>
-    </section>
 
     <!-- Portfolio -->
-    <section class="content-section" id="portfolio">
+    <section id='mealMenu' class="content-section">
       <div class="container">
         <div class="content-section-heading text-center">
           <h2 class="mb-5">찬집 도시락 메뉴</h2>
@@ -109,68 +99,76 @@
       </div>
     </section>
 
-    <!-- Call to Action -->
+    <!-- Uber Advertise -->
+    <section id='deliveryUber' class="uber-getApp">
+      <div class="container text-center">
+		<h2 class="mb-5 txt-front-uberExplain" >배달은 우버이츠로!</h2>
+        	<a class="btn btn-orange btn-xl" href="https://play.google.com/store/apps/details?id=com.ubercab.eats&hl=ko">갑시다 앱 받으러 GO!</a>
+      </div>
+    </section>
 
-    <section class="content-section bg-primary text-white">
+    <section id="liveShowcase" class="content-section bg-primary text-white">
 	<!-- img id='streamPicture' class="img-responsive img-centered" -->
       <div class="container text-center">
         <h2 class="mb-4">찬집 반찬 실시간 쇼케이스</h2>
-        <a href="#" class="btn btn-xl btn-light mr-4">실시간 사진</a>
-        <a href="#" class="btn btn-xl btn-dark">실시간 동영상(데이터주의)</a>
+	<p>
+        <a href="streamPicture.html" class="btn btn-xl btn-light mr-4">실시간 사진</a> 
+	</p>
+	<p>
+        <a href="streamVideo.html" class="btn btn-xl btn-dark">실시간 동영상(데이터주의)</a>
+	</p>
 	<div id="streamPicture_datetime"></div>
       </div>
     </section>
 
     <!-- Map -->
-    <section id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-      <br/>
-      <small>
-        <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-      </small>
+    <section id="daumMap" class="map section-map">
+	<div class="container">
+            <div class="row" id='mapContainer'>
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">오시는길</h2>
+                    <h3 class="section-subheading text-muted">서울시 마포구 광성로 28 상가동 지2층 102호</h2>
+                </div>
+                <div id="daumRoughmapContainer1484205925798" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+            </div>
+
+                <div class="col-lg-12 text-center">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer text-center">
-      <div class="container">
-        <ul class="list-inline mb-5">
-          <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="#">
-              <i class="icon-social-facebook"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="#">
-              <i class="icon-social-twitter"></i>
-            </a>
-          </li>
-          <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white" href="#">
-              <i class="icon-social-github"></i>
-            </a>
-          </li>
-        </ul>
-        <p class="text-muted small mb-0">Copyright &copy; Your Website 2017</p>
-      </div>
-    </footer>
+	<footer class="footer text-center">
+	<div class="container">
+	<ul class="list-inline mb-5">
+		<li class="list-inline-item">
+		<a class="social-link rounded-circle text-white" href='http://www.instagram.com/chan_zip'>
+		<i class="icon-social-instagram"></i>
+		</a>
+		</li>
+	</ul>
+	<p class="text-muted small mb-0">Copyright &copy; 찬집 Tel: 02-707-1238</p>
+	</div>
+	</footer>
 
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
-      <i class="fa fa-angle-up"></i>
-    </a>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+	<i class="fa fa-angle-up"></i>
+	</a>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+	<!-- Plugin JavaScript -->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+	<script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
+	
+	<!-- Custom scripts for this template -->
+	<script src="js/stylish-portfolio.js"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="js/stylish-portfolio.js"></script>
-
-    <script src="js/chanzip.js"></script>
-
-  </body>
+	<script src="js/chanzip.js"></script>
+	</body>
 
 </html>

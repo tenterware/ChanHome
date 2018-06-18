@@ -1,4 +1,3 @@
-/*
 new daum.roughmap.Lander({
         "timestamp" : "1484205925798",
         "key" : "fcto"
@@ -8,7 +7,6 @@ var mapContainer = document.getElementById('mapContainer');
 var curWidth = mapContainer.offsetWidth;
 daumContainer.style.width = curWidth + 'px';
 daumContainer.style.height = '400px';
-*/
 
 function formatDate(d) {
 	month = '' + (d.getMonth() + 1),
